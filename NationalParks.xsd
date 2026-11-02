@@ -3,7 +3,7 @@
   NationalParks.xsd - CSE445 Assignment 4 (Q1.1)
   Number, Street, City, State, Zip (in this order)
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://cojim21.github.io/CSE445_Assignment4" targetNamespace="https://cojim21.github.io/CSE445_Assignment4" elementFormDefault="qualified" attributeFormDefault="unqualified">
 
   <!-- Root element: a list of one or more national parks -->
   <xs:element name="NationalParks">
@@ -21,7 +21,6 @@
       <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
       <xs:element name="Address" type="AddressType" minOccurs="1" maxOccurs="1" />
     </xs:sequence>
-    <!-- Optional (implied) attribute: visitor rating, e.g. 4.9 -->
     <xs:attribute name="Rating" type="xs:decimal" use="optional" />
   </xs:complexType>
 
